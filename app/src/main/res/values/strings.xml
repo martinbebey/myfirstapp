@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My First App</string>
+    <string name="button_send">Push Me</string>
+    <string name="edit_message">This is Martin\'s first app ever</string>
 </resources>
