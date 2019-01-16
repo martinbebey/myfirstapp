@@ -2,6 +2,7 @@ package com.example.t8801cb.myfirstapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -11,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Example of a call to a native method
-        sample_text.text = stringFromJNI()
+        //sample_text.text = stringFromJNI()
+
     }
 
     /**
@@ -27,4 +29,11 @@ class MainActivity : AppCompatActivity() {
             System.loadLibrary("native-lib")
         }
     }
+
+
+    /** Called when the user taps the Send button */
+    fun sendMessage(view: View) {
+        // Do something in response to button
+    }
+
 }
