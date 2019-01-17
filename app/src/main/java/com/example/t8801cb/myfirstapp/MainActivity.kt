@@ -1,9 +1,13 @@
 package com.example.t8801cb.myfirstapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import kotlinx.android.synthetic.main.activity_main.*
+
+const val EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE"
 
 class MainActivity : AppCompatActivity() {
 
@@ -32,8 +36,13 @@ class MainActivity : AppCompatActivity() {
 
 
     /** Called when the user taps the Send button */
-    fun sendMessage(view: View) {
+    fun sendMessage(view: View)
+    {
         // Do something in response to button
+        val editText = findViewById<EditText>(R.id.editText)
+        val message = editText.text.toString()
+        val intent = Intent(this, DisplayMessageActivity::class.java).apply{putExtra(EXTRA_MESSAGE, message)}
+        startActivity(intent)
     }
 
 }
